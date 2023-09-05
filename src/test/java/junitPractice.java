@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 public class junitPractice {
-
+ public WebDriver driver;
 
     @Test
     public void test() {
@@ -21,11 +21,9 @@ public class junitPractice {
         //System.out.println("run the test method");
     }
 
-
-
-
-
-
-
+@After
+    public void close(){
+        driver.close();
+}
 
 }
